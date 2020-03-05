@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test | JQuery</title>
+
+    <style type="text/css">
+        #ex1{
+            margin: auto;
+            width: 80%;
+        }
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        img{
+            margin-top: 20px;
+            border: 1px solid white;
+        }
+        .contentImg{
+            width: 400px;
+            height: 275px;
+        }
+        h4{
+            font-size: 22px;
+            color: red;
+            margin: 30px 0;
+        }
+        .Ex2{
+            margin: 30px 0px; 
+        }
+        .content-ex2{
+            width: 70%;
+
+        }
+        form{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            height: 80px;
+        }
+        label{
+            width: 50%;
+            position: absolute;
+            text-align: initial;
+            left: 29%;
+            padding-top: 58px;
+        }
+        input{
+            width: 60%;
+            margin: auto;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid red;
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            padding-top: 30px;
+            margin-bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>jquery définition</h1><br>
+        <button class="play">Play</button>
+        <button class="pause">Pause</button>
+        <p>jQuery est une bibliothèque JavaScript...</p><button class="show">Show More</button>
+        <button class="hide">hide</button><br>
+
+        <h2></h2>
+        <li id="a">DDDDDDDDDD</li>
+        <li id="b">HHHHHHHHH</li>
+        <li id="c">SSSSSSSSSS</li>
+        <!-- exercices -->
+        <div id="ex1">
+            <h3>Exercice | JQuery</h3>
+            <h4>Exercice 1</h4>
+            <div class="container">
+                <div class="contentImg">
+                   <img class="cafe1" src="img/1.jpg" width="300px">  
+                </div>
+                <div class="contentImg">
+                   <img class="cafe2" src="img/2.jpg" width="300px">  
+                </div>
+                <div class="contentImg">
+                   <img class="cafe3" src="img/3.jpg" width="300px">  
+                </div>
+                <div class="contentImg">
+                   <img class="cafe4" src="img/4.jpg" width="300px">  
+                </div>
+                <div class="contentImg">
+                   <img class="cafe5" src="img/5.jpg" width="300px">  
+                </div>
+                <div class="contentImg">
+                   <img class="cafe6" src="img/6.jpg" width="300px">  
+                </div>
+            </div>
+        </div>  
+        <div class="Ex2">
+            <h4>Excercice 2</h4>
+            <h5 style="color: #d39859">Verifier Mot de Passe</h5>
+            <div class="content-ex2">
+                <form>
+                    <label class="email">Entrer votre Email</label>
+                    <input class="mail" type="text" name="Email"> 
+                </form>
+                <form>
+                    <label>Entrer votre Password</label>
+                    <input type="password" name="password"> 
+                </form><form>
+                    <label>Confirmer votre Password</label>
+                    <input type="password" name="password"> 
+                </form>
+                <form>
+                    <label>Entrer votre Password</label>
+                    <input type="password" name="password"> 
+                </form>
+                
+            </div>
+        </div>     
+    </center>   
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script>
+
+
+
+        $(document).ready(function(){
+            // Exercice 1 
+            $(".cafe1").mouseover(function(){
+                $(".cafe1").css({width: "400px",transition: "width 0.5s", border:"3px solid red"});
+            });
+            $(".cafe1").mouseout(function(){
+                $(".cafe1").css({width: "300px",transition: "width 0.5s", border:"1px solid white"});
+            });
+            $(".cafe2").mouseover(function(){
+                $(".cafe2").css({width: "400px",transition: "width 0.5s", border:"3px solid red"});
+            });
+            $(".cafe2").mouseout(function(){
+                $(".cafe2").css({width: "300px",transition: "width 0.5s", border:"1px solid white"});
+            });
+             $(".cafe3").mouseover(function(){
+                $(".cafe3").css({width: "400px",transition: "width 0.5s", border:"3px solid red"});
+            });
+            $(".cafe3").mouseout(function(){
+                $(".cafe3").css({width: "300px",transition: "width 0.5s", border:"1px solid white"});
+            });
+             $(".cafe4").mouseover(function(){
+                $(".cafe4").css({width: "400px",transition: "width 0.5s", border:"3px solid red"});
+            });
+            $(".cafe4").mouseout(function(){
+                $(".cafe4").css({width: "300px",transition: "width 0.5s", border:"1px solid white"});
+            });
+            $(".cafe5").mouseover(function(){
+                $(".cafe5").css({width: "400px",transition: "width 0.5s", border:"3px solid red"});
+            });
+            $(".cafe5").mouseout(function(){
+                $(".cafe5").css({width: "300px",transition: "width 0.5s", border:"1px solid white"});
+            });
+            $(".cafe6").mouseover(function(){
+                $(".cafe6").css({width: "400px",transition: "width 0.5s", border:"3px solid red"});
+            });
+            $(".cafe6").mouseout(function(){
+                $(".cafe6").css({width: "300px",transition: "width 0.5s", border:"1px solid white"});
+            });
+
+
+
+            // fin Exercice 1
+        // ========================
+            // Exercice 2
+            $(".mail").click(function(){
+                $(".email").animate({paddingTop:"-20px"})
+            });
+
+// ==================================================
+            //set audio variable
+            var audioElement = document.createElement("audio");
+
+            //set the audio path
+            audioElement.setAttribute("src", "music/leonell-cassio-julia-mihevc-night-sky.mp3");
+
+            //call the play function
+            $(".play").click(function(){
+                audioElement.play();
+            });
+
+            //call the pause function
+            $(".pause").click(function(){
+                audioElement.pause();
+            });
+            $(".hide").click(function(){
+                $("p").text("jQuery est une bibliothèque JavaScript...");
+            });
+            $(".show").click(function(){
+                $("p").slideDown("slow");
+                $("p").text("jQuery est une bibliothèque JavaScript libre et multiplateforme créée pour faciliter l'écriture de scripts côté client dans le code HTML des pages web. La première version est lancée en janvier 2006 par John Resig");
+            });
+
+            
+
+            //change title h1
+            $("h1").text("jQuery la bibliothèque JavaScript open-source!");
+            $("h1").css("color","red");
+            
+            $("h2").text("JavaScript, jQuery : c'est quoi la différence ?");
+            $("#a").text("Ajouter, supprimer ou modifier des éléments HTML au sein de votre page");
+            $("#b").text("Changer les styles des éléments de la page en modifiant le CSS qui leur est associé.");
+            $("#c").text("Animer des éléments de votre page.");
+            $("body").css("background-color", "black");
+            $("body").css("color", "white");
+            $("*").css("font-family", "calibri");
+
+
+        });
+    </script>
+</body>
+</html>
+
+function fun(data,statsus){
+    if(status == "success"){}
+}
+$.get("phone.jason" ,fun);
